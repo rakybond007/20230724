@@ -1,14 +1,16 @@
-def add(a,b):
-    return a+b
+def add(add_list):
+    return sum(add_list)
 
-def sub(a,b):
-    return a-b
+def sub(sub_list):
+    result = []
+    for from_num, sub_num in sub_list[0],sub_list[1]:
+        result += [from_num - sub_num]
+    return result
 
 add_numbers = [1,3]
 sub_numbers = [[5,4],[4,3]]
 
-add_result = add(add_numbers[0], add_numbers[1])
-sub_result1 = sub(sub_numbers[0][0], sub_numbers[1][0])
-sub_result2 = sub(sub_numbers[0][1], sub_numbers[1][1])
+add_result = add(add_numbers)
+sub_result = sub(sub_numbers)
 
-print(add_result, sub_result1, sub_result2)
+print(add_result, sub_result)
