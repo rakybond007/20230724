@@ -1,5 +1,9 @@
 def add(add_list):
-    return sum(add_list)
+    result = 0
+    for each_num in add_list:
+        if each_num >= 0:
+            result += each_num
+    return result
 
 def sub(sub_list):
     result = []
